@@ -44,3 +44,20 @@ describe 'my_transpose' do
     end
 
 end
+
+describe 'stock_picker' do
+let(:array){[1, 2, 3, 4, 5, 6]}
+let(:array2){[100000, 4503, 10733, 98989]}
+let(:array3){[3700, 88764, 342224, 900]}
+
+    it 'should accept an array' do
+        expect{stock_picker(array)}.to_not raise_error
+    end
+
+    it 'should return a pair of numbers with the biggest difference' do
+        expect(stock_picker(array)).to eq([0, 5])
+        expect(stock_picker(array2)).to eq([1, 3])
+        expect(stock_picker(array3)).to eq([0, 2])
+    end
+
+end

@@ -24,4 +24,17 @@ def my_transpose(array)
     transposed
 end
 
+def stock_picker(arr)
+    days = []
+    max = 0
+    arr.each_with_index do |el1, i|
+        arr.each_with_index do |el2, j|
+            if el2 - el1 > max && j > i
+                days = [i, j]
+                max = el2 - el1
+            end
+        end
+    end
+    days
+end
 
