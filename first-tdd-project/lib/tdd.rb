@@ -4,12 +4,24 @@ def my_uniq(array)
     uniq
 end
 
-def two_sum(arr)
+def two_sum(array)
     pairs = []
-    arr.each_with_index do |el1, i|
-        arr.each_with_index do |el2, j|
-            pairs << [i, j] if el1 + el2 == 0 and i < j
-        end
+    array.each_with_index do |el1, i|
+        array.each_with_index { |el2, j| pairs << [i, j] if el1 + el2 == 0 and i < j }
     end
     pairs
 end
+
+def my_transpose(array)
+    rows = array.length
+    cols = array[0].length
+    transposed = Array.new(cols) { [] }
+
+    rows.times do |i|
+        cols.times { |j| transposed[j] << array[i][j] }
+    end
+
+    transposed
+end
+
+
