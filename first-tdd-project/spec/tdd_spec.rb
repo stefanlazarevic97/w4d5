@@ -61,3 +61,9 @@ let(:array3){[3700, 88764, 342224, 900]}
     end
 end
 
+describe 'TowersOfHanoi' do
+    subject(:toh){TowersOfHanoi.new(4)}
+    describe '#initialize' do
+        
+    end
+end
