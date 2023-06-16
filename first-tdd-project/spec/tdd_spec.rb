@@ -59,5 +59,5 @@ let(:array3){[3700, 88764, 342224, 900]}
         expect(stock_picker(array2)).to eq([1, 3])
         expect(stock_picker(array3)).to eq([0, 2])
     end
-
 end
+
