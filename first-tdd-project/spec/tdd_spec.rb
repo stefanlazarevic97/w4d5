@@ -14,4 +14,12 @@ describe "my_uniq" do
     end
 end
 
-describe ""
+describe "two_sum" do
+    let(:array) { [-1, 0, 2, -2, 1] } 
+    it 'should accept an array' do
+       expect{ two_sum(array)}.to_not raise_error
+    end
+    it 'should return an array that contains pair of positions where the elements at those positions sum to zero' do
+       expect(two_sum(array)).to eq([[0,4], [2,3]])
+    end
+end
